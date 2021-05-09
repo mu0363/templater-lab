@@ -52,33 +52,35 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Templater</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <h1>Templater Form</h1>
-      <form onSubmit={onSubmit}>
-        <div>
-          <label>Caption1</label>
-          <input
-            type='text'
-            value={caption1}
-            onChange={(e) => setCaption1(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Caption2</label>
-          <input
-            type='text'
-            value={caption2}
-            onChange={(e) => setCaption2(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Photo</label>
-          <input type='file' onChange={handleChange} />
-        </div>
-        <button type='submit'>Submit</button>
-      </form>
+      <div className='bg-gray-200 '>
+        <h1 className='text-4xl'>Templater Form</h1>
+        <form onSubmit={onSubmit}>
+          <div>
+            <label>Caption1</label>
+            <input
+              type='text'
+              value={caption1}
+              onChange={(e) => setCaption1(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Caption2</label>
+            <input
+              type='text'
+              value={caption2}
+              onChange={(e) => setCaption2(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Photo</label>
+            <input type='file' onChange={handleChange} />
+          </div>
+          <button type='submit'>Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
