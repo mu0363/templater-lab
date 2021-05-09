@@ -55,8 +55,8 @@ export default function Home() {
         <title>Templater</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className='bg-gray-200 '>
-        <h1 className='text-4xl'>Templater Form</h1>
+      <div className='bg-red-400'>
+        <h1 className='text-4xl'>Templater Form Here</h1>
         <form onSubmit={onSubmit}>
           <div>
             <label>Caption1</label>
