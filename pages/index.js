@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { format } from 'date-fns';
 import { appendSpreadsheet } from '../utils/appendSpreadSheet';
 import { generateFilename } from '../utils/generateFilename';
@@ -81,9 +82,9 @@ export default function Home() {
           <button type='submit'>Submit</button>
         </form>
       </div>
-      <h1>{process.env.NEXT_PUBLIC_SPREADSHEET_ID}</h1>
-      <h1>{process.env.NEXT_PUBLIC_FIREBASE_CLIENT_EMAIL}</h1>
-      <h1>{process.env.NEXT_PUBLIC_FIREBASE_PRIVATE_KEY}</h1>
+      <Link href='/list'>
+        <a>video list</a>
+      </Link>
     </div>
   );
 }
