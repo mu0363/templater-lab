@@ -81,6 +81,9 @@ export default function Home() {
           <button type='submit'>Submit</button>
         </form>
       </div>
+      <h1>{process.env.NEXT_PUBLIC_SPREADSHEET_ID}</h1>
+      <h1>{process.env.NEXT_PUBLIC_FIREBASE_CLIENT_EMAIL}</h1>
+      <h1>{process.env.NEXT_PUBLIC_FIREBASE_PRIVATE_KEY}</h1>
     </div>
   );
 }
