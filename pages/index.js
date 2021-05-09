@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { format } from 'date-fns';
-import styles from '../styles/Home.module.css';
 import { appendSpreadsheet } from '../utils/appendSpreadSheet';
 import { generateFilename } from '../utils/generateFilename';
 import { uploadImage } from '../utils/uploadImage';
@@ -51,7 +50,7 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
