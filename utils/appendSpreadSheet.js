@@ -13,7 +13,10 @@ export const appendSpreadsheet = async (row) => {
   try {
     await doc.useServiceAccountAuth({
       client_email: process.env.NEXT_PUBLIC_FIREBASE_CLIENT_EMAIL,
-      private_key: process.env.NEXT_PUBLIC_FIREBASE_PRIVATE_KEY,
+      private_key: process.env.NEXT_PUBLIC_FIREBASE_PRIVATE_KEY.replace(
+        /\\n/g,
+        '\n'
+      ),
     });
     // loads document properties and worksheets
     await doc.loadInfo();
