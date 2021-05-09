@@ -3,6 +3,7 @@ import { CloudinaryContext, Video } from 'cloudinary-react';
 import { getFirestoreCloudinary } from '../utils/getFirestoreCloudinary';
 
 export default function List({ cloudinaryInfo }) {
+  console.log();
   return (
     <div>
       <h1 className='text-4xl'>List</h1>
@@ -26,7 +27,7 @@ export default function List({ cloudinaryInfo }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const cloudinaryInfo = await getFirestoreCloudinary();
   return {
     props: {
