@@ -56,7 +56,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className='bg-red-400'>
-        <h1 className='text-4xl'>Templater Form Here</h1>
+        <h1 className='text-4xl'>Templater remove \n from secret key </h1>
         <form onSubmit={onSubmit}>
           <div>
             <label>Caption1</label>
