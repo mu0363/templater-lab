@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { format } from 'date-fns';
 import { Layout } from 'src/components/Layout';
 import { appendSpreadsheet } from '../utils/appendSpreadSheet';
 import { generateFilename } from '../utils/generateFilename';
 import { uploadImage } from '../utils/uploadImage';
+import { blogPosts } from 'src/lib/data';
 
 export default function Home() {
   const [caption1, setCaption1] = useState('');
@@ -79,6 +82,13 @@ export default function Home() {
           </div>
           <button type='submit'>Submit</button>
         </form>
+        {blogPosts.map((item) => (
+          <div key={item.slug}>
+            <Link href={`/blog/${item.slug}`}>
+              <a>{item.title}</a>
+            </Link>
+          </div>
+        ))}
       </Layout>
     </div>
   );
