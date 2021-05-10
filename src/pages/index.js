@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { format } from 'date-fns';
+import { Layout } from 'src/components/Layout';
 import { appendSpreadsheet } from '../utils/appendSpreadSheet';
 import { generateFilename } from '../utils/generateFilename';
 import { uploadImage } from '../utils/uploadImage';
@@ -56,8 +55,7 @@ export default function Home() {
         <title>Templater</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className='bg-red-400'>
-        <h1 className='text-4xl'>Templater remove \n from secret key </h1>
+      <Layout>
         <form onSubmit={onSubmit}>
           <div>
             <label>Caption1</label>
@@ -81,10 +79,7 @@ export default function Home() {
           </div>
           <button type='submit'>Submit</button>
         </form>
-      </div>
-      <Link href='/list'>
-        <a>video list</a>
-      </Link>
+      </Layout>
     </div>
   );
 }
